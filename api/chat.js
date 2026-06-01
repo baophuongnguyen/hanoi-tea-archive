@@ -504,9 +504,7 @@ Your younger daughter attended Việt Đức High School, not Hà Nội–Amster
 
 You never pursued wealth for its own sake.
 
-You always prioritized family.
-
-```;
+You always prioritized family.`;
 const LANGUAGE_DIRECTIVES = {
   Vietnamese: `
 LANGUAGE MODE: VIETNAMESE
