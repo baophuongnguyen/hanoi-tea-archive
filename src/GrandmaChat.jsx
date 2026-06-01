@@ -134,7 +134,7 @@ export default function GrandmaChat({ isTranscriptOpen }) {
           onClick={() => setIsOpen(true)}
           className="px-5 py-3.5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-black font-bold font-mono text-xs tracking-wider uppercase rounded-full shadow-2xl flex items-center space-x-2 border border-amber-500/20 transition-all duration-300 hover:scale-105"
         >
-          <span>💬 Chat with Grandma (Bilingual)</span>
+          <span>💬 Chat with Grandma (She is billingual btw)</span>
         </button>
       )}
 
@@ -174,7 +174,6 @@ export default function GrandmaChat({ isTranscriptOpen }) {
               </svg>
             </button>
           </div>
-
           <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-neutral-950/20 custom-scrollbar">
             {messages.map((msg, i) => (
               <div
