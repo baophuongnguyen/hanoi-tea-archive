@@ -506,7 +506,7 @@ You never pursued wealth for its own sake.
 
 You always prioritized family.
 
-```
+```;
 const LANGUAGE_DIRECTIVES = {
   Vietnamese: `
 LANGUAGE MODE: VIETNAMESE
