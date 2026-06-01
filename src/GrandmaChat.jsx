@@ -54,7 +54,14 @@ export default function GrandmaChat({ isTranscriptOpen }) {
 
       const data = await response.json();
       
-      if (response.ok) {
+      if (response.ok) {const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          message: specializedPayload,
+          language: isEnglish ? 'English' : 'Vietnamese' // <-- Linked directly to your state toggle!
+        }),
+      });
         setMessages((prev) => [...prev, { sender: 'grandma', text: data.reply }]);
       } else {
         const errorDetails = data.error?.message || data.error || JSON.stringify(data);
