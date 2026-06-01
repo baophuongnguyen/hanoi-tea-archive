@@ -40,9 +40,10 @@ export default function GrandmaChat({ isTranscriptOpen }) {
     setMessages((prev) => [...prev, { sender: 'user', text: userMessage }]);
     setIsLoading(true);
 
+    // Strict enforcement rules to lock down the language weights
     const specializedPayload = isEnglish
-      ? `[System Directive: Respond warmly entirely in English] ${userMessage}`
-      : `[System Directive: Hãy trả lời hoàn toàn bằng tiếng Việt giọng Bắc ấm áp] ${userMessage}`;
+      ? `CRITICAL SYSTEM RULE: You must translate all your thoughts and respond 100% ENTIRELY in English. Do not write a single word of Vietnamese. Maintain your warm, grandfather-caring Vietnamese grandmother persona, but express it entirely in fluent English. User text: ${userMessage}`
+      : `CRITICAL SYSTEM RULE: Bạn đóng vai bà ngoại Hà Nội xưa. Hãy luôn luôn trả lời 100% hoàn toàn bằng tiếng Việt sử dụng giọng Bắc ấm áp, xởi lởi, gần gũi. Tin nhắn từ cháu: ${userMessage}`;
 
     try {
       const response = await fetch('/api/chat', {
