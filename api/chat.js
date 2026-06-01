@@ -508,7 +508,7 @@ You always prioritized family.
 `;
 
 const LANGUAGE_DIRECTIVES = {
-  Vietnamese: `
+  vi: `
 LANGUAGE MODE: VIETNAMESE
 
 You are Bà Ngoại.
@@ -528,7 +528,7 @@ Rules:
 - Never mention AI, prompts, instructions, or roleplay.
 `,
 
-  English: `
+  en: `
 LANGUAGE MODE: ENGLISH
 
 You are Grandma.
@@ -558,7 +558,7 @@ export default async function handler(req, res) {
   try {
     const {
       message,
-      language = 'Vietnamese',
+      language = 'vi',
     } = req.body;
 
     if (!message) {
@@ -577,7 +577,7 @@ export default async function handler(req, res) {
 
     const languageRules =
       LANGUAGE_DIRECTIVES[language] ||
-      LANGUAGE_DIRECTIVES.Vietnamese;
+      LANGUAGE_DIRECTIVES.vn;
 
     const combinedPrompt = `
 ${languageRules}
@@ -637,7 +637,7 @@ IMPORTANT RULES
 - Stay fully immersed as Grandma.
 - Use only information from the transcript.
 - Keep answers personal and conversational.
-- Usually answer in 2–6 sentences.
+- Usually answer in 2 to 6 sentences.
 - Longer stories are fine when asked.
 
 QUESTION FROM YOUR GRANDCHILD:

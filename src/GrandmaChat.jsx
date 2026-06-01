@@ -66,7 +66,7 @@ export default function GrandmaChat({ isTranscriptOpen }) {
         },
         body: JSON.stringify({
           message: userMessage,
-          language: isEnglish ? 'English' : 'Vietnamese',
+          language: isEnglish ? 'en' : 'vi',
         }),
       });
 
